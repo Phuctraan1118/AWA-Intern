@@ -3,11 +3,20 @@ import { Input, Icon } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
 import React from "react";
 
-export default function IconInput({ type, name, onChangeText, placeHolder }) {
+export default function IconInput({
+  type,
+  name,
+  onChangeText,
+  placeHolder,
+  width,
+  mx,
+  my,
+}) {
   return (
     <Input
-      width="90%"
-      mt="2"
+      width={width}
+      mx={mx}
+      my={my}
       variant="unstyled"
       borderRadius="8"
       height="40px"

@@ -26,19 +26,31 @@ const LoginScreen = () => {
           alignItems="center"
           backgroundColor="rgba(0,0,0,.2)"
           width="90%"
-          paddingBottom="40px"
+          paddingBottom="20px"
         >
           <Text fontFamily="Bold" color="white" fontSize={28}>
             Đăng nhập
           </Text>
 
-          <IconInput name="person" type="text" onChangeText={() => {}} />
+          <IconInput
+            name="person"
+            type="text"
+            width="90%"
+            onChangeText={() => {}}
+            my="10px"
+          />
           <IconInput
             name="lock-closed"
             type="password"
+            width="90%"
+            my="5px"
             onChangeText={() => {}}
           />
-          <ButtonA text="Đăng nhập" onPress={() => console.log("Clicked")} />
+          <ButtonA
+            text="Đăng nhập"
+            onPress={() => console.log("Clicked")}
+            my="20px"
+          />
         </Box>
       </Stack>
     </TouchableWithoutFeedback>

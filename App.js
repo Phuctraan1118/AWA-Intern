@@ -11,6 +11,7 @@ import {
 } from "@expo-google-fonts/quicksand";
 
 import LoginScreen from "./src/screens/Login";
+import SelectFactory from "./src/screens/SelectFactory";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -24,6 +25,7 @@ export default function App() {
     return (
       <NativeBaseProvider>
         <LoginScreen />
+        {/* <SelectFactory /> */}
       </NativeBaseProvider>
     );
   }
