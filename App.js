@@ -3,17 +3,30 @@ import React from "react";
 // import { StyleSheet, View } from 'react-native';
 
 import { NativeBaseProvider, Text, Box } from "native-base";
-
-
+import AppLoading from "expo-app-loading";
+import {
+  useFonts,
+  Quicksand_600SemiBold,
+  Quicksand_700Bold,
+} from "@expo-google-fonts/quicksand";
 
 import LoginScreen from "./src/screens/Login";
 
 export default function App() {
-  return (
-    <NativeBaseProvider>
-      <LoginScreen />
-    </NativeBaseProvider>
-  );
+  let [fontsLoaded] = useFonts({
+    SemiBold: Quicksand_600SemiBold,
+    Bold: Quicksand_700Bold,
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  } else {
+    return (
+      <NativeBaseProvider>
+        <LoginScreen />
+      </NativeBaseProvider>
+    );
+  }
 }
 
 // const styles = StyleSheet.create({

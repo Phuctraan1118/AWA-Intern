@@ -3,7 +3,7 @@ import { Input, Icon } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
 import React from "react";
 
-export default function IconInput(type, name) {
+export default function IconInput({ type, name, onChangeText, placeHolder }) {
   return (
     <Input
       width="90%"
@@ -14,11 +14,10 @@ export default function IconInput(type, name) {
       backgroundColor="white"
       size="14"
       fontFamily="Bold"
+      placeHolder={placeHolder}
       type={type}
-      InputLeftElement={
-        <Icon as={<Ionicons name= {name} />} size="6" ml="3" />
-      }
-      //onChangeText={{}}
+      InputLeftElement={<Icon as={<Ionicons name={name} />} size="6" ml="3" />}
+      onChangeText={onChangeText}
     />
   );
 }
