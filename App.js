@@ -1,8 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 // import { StyleSheet, View } from 'react-native';
-
-import { NativeBaseProvider, Text, Box } from "native-base";
+import HomeTabNavigator from "./src/routes/HomeTabNavigator";
+import { NativeBaseProvider } from "native-base";
 import AppLoading from "expo-app-loading";
 import {
   useFonts,
@@ -24,7 +24,8 @@ export default function App() {
   } else {
     return (
       <NativeBaseProvider>
-        <LoginScreen />
+        <HomeTabNavigator/>
+        {/* <LoginScreen /> */}
         {/* <SelectFactory /> */}
       </NativeBaseProvider>
     );
