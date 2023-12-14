@@ -7,7 +7,7 @@ import IconInput from "../../components/IconInput";
 import ButtonA from "../../components/ButtonA";
 const image = require("../../assets/background_1.gif");
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <Stack
@@ -48,7 +48,7 @@ const LoginScreen = () => {
           />
           <ButtonA
             text="Đăng nhập"
-            onPress={() => console.log("Clicked")}
+            onPress={() => navigation.navigate('SelectFactory')}
             my="20px"
           />
         </Box>
