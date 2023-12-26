@@ -1,4 +1,4 @@
-package com.awaapp;
+package com.anonymous.AWAApp;
 
 import android.os.Build;
 import android.os.Bundle;

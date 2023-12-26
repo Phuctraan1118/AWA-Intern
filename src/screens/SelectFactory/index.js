@@ -17,7 +17,7 @@ const data = [
     value: "saigon",
   },
 ];
-const SelectFactory = () => {
+const SelectFactory = ({ navigation }) => {
   const [factory, setFactory] = useState("");
 
   return (
@@ -55,7 +55,7 @@ const SelectFactory = () => {
             <ButtonA
               text="Tiếp tục"
               width="30%"
-              onPress={() => console.log("Clicked")}
+              onPress={() => navigation.navigate("HomeTabNavigator")}
             />
           </HStack>
         </Box>

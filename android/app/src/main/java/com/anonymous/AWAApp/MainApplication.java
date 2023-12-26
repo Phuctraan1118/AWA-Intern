@@ -1,4 +1,4 @@
-package com.awaapp;
+package com.anonymous.AWAApp;
 
 import android.app.Application;
 import android.content.res.Configuration;

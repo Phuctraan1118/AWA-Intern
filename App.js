@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 // import { StyleSheet, View } from 'react-native';
-import HomeTabNavigator from "./src/routes/HomeTabNavigator";
+import HomeTabNavigator from "./src/routes/routes";
 import { NativeBaseProvider } from "native-base";
 import AppLoading from "expo-app-loading";
 import {
@@ -9,9 +9,8 @@ import {
   Quicksand_600SemiBold,
   Quicksand_700Bold,
 } from "@expo-google-fonts/quicksand";
-
-import LoginScreen from "./src/screens/Login";
-import SelectFactory from "./src/screens/SelectFactory";
+import "react-native-gesture-handler";
+import Routes from "./src/routes/routes";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -24,9 +23,7 @@ export default function App() {
   } else {
     return (
       <NativeBaseProvider>
-        <HomeTabNavigator/>
-        {/* <LoginScreen /> */}
-        {/* <SelectFactory /> */}
+        <Routes />
       </NativeBaseProvider>
     );
   }
